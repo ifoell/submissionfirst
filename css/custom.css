@@ -17,5 +17,9 @@
 }
 
 .card-title, span {
-    padding-left: 4em !important;
+    padding: 5px !important;
+}
+
+nav {
+    margin-bottom: 1.5rem;
 }

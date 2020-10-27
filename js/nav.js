@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
 	// SIDEBAR NAVIGATION
-	var elems = document.querySelectorAll('.sidenav');
+	const elems = document.querySelectorAll('.sidenav');
 	M.Sidenav.init(elems);
 	loadNav();
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	{
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
-			if (this.readyState == 4){
+			if (this.readyState === 4){
 				if(this.status != 200) return;
 
 				// Muat daftar tautan menu
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				}
 			}
 		};
-		xhttp.open("GET", 'pages/'+page+'.html', true);
+		xhttp.open("GET", `pages/${page}.html`, true);
 		xhttp.send();
 	}
 
