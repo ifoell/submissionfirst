@@ -20,6 +20,8 @@
     padding: 5px !important;
 }
 
-nav {
-    margin-bottom: 1.5rem;
+@media(max-width: 392px){
+    nav .brand-logo {
+        font-size: 1rem !important;
+    }
 }
