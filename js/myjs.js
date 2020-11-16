@@ -1,4 +1,4 @@
-var convertUTCDate = date => {
+const convertUTCDate = (date) => {
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ];
@@ -6,7 +6,7 @@ var convertUTCDate = date => {
     return `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()} ${formatAMPM(date)}`
 }
 
-function formatAMPM(date) {
+const formatAMPM = (date) => {
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
@@ -16,3 +16,7 @@ function formatAMPM(date) {
     var strTime = hours + ':' + minutes + ' ' + ampm;
     return strTime;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    var page = window.location.hash.substr(1);
+  });
